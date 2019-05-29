@@ -139,6 +139,7 @@
             this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.ExistenciaNumericUpDown.TabIndex = 7;
             this.ExistenciaNumericUpDown.Tag = "";
+            this.ExistenciaNumericUpDown.ValueChanged += new System.EventHandler(this.ExistenciaNumericUpDown_ValueChanged);
             // 
             // CostoNumericUpDown
             // 
@@ -158,6 +159,7 @@
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
             this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.CostoNumericUpDown.TabIndex = 8;
+            this.CostoNumericUpDown.ValueChanged += new System.EventHandler(this.CostoNumericUpDown_ValueChanged);
             // 
             // ValorInventarioTextBox
             // 

@@ -150,5 +150,15 @@ namespace ProyectoParcial1.UI.Registros
             else
                 MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            ValorInventarioTextBox.Text = Convert.ToString(ExistenciaNumericUpDown.Value * CostoNumericUpDown.Value);
+        }
+
+        private void CostoNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            ValorInventarioTextBox.Text = Convert.ToString(ExistenciaNumericUpDown.Value * CostoNumericUpDown.Value);
+        }
     }
 }
