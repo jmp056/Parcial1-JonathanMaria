@@ -31,10 +31,10 @@ namespace ProyectoParcial1.UI.Registros
         private Productos LlenaClase()
         {
             Productos producto = new Productos();
-            producto.IdProducto = Convert.ToInt32(IdProductoNumericUpDown);
+            producto.IdProducto = Convert.ToInt32(IdProductoNumericUpDown.Value);
             producto.Descripcion = DescripcionTextBox.Text;
-            producto.Existencia = Convert.ToInt32(ExistenciaNumericUpDown);
-            producto.Costo = Convert.ToSingle(CostoNumericUpDown);
+            producto.Existencia = Convert.ToInt32(ExistenciaNumericUpDown.Value);
+            producto.Costo = Convert.ToSingle(CostoNumericUpDown.Value);
             return producto;
         }
 

@@ -104,6 +104,11 @@
             // 
             this.IdProductoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdProductoNumericUpDown.Location = new System.Drawing.Point(155, 37);
+            this.IdProductoNumericUpDown.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
             this.IdProductoNumericUpDown.Name = "IdProductoNumericUpDown";
             this.IdProductoNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.IdProductoNumericUpDown.TabIndex = 5;
@@ -119,15 +124,37 @@
             // ExistenciaNumericUpDown
             // 
             this.ExistenciaNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExistenciaNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(155, 99);
+            this.ExistenciaNumericUpDown.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
             this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.ExistenciaNumericUpDown.TabIndex = 7;
+            this.ExistenciaNumericUpDown.Tag = "";
             // 
             // CostoNumericUpDown
             // 
+            this.CostoNumericUpDown.DecimalPlaces = 2;
             this.CostoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostoNumericUpDown.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.CostoNumericUpDown.Location = new System.Drawing.Point(155, 136);
+            this.CostoNumericUpDown.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
             this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.CostoNumericUpDown.TabIndex = 8;
