@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.IdProducto = new System.Windows.Forms.Label();
             this.Descripcion = new System.Windows.Forms.Label();
             this.Existencia = new System.Windows.Forms.Label();
             this.Costo = new System.Windows.Forms.Label();
             this.ValorInventario = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.IdProductoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
+            this.ExistenciaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ValorInventarioTextBox = new System.Windows.Forms.TextBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IdProducto
@@ -97,45 +100,45 @@
             this.ValorInventario.TabIndex = 4;
             this.ValorInventario.Text = "Valor Inventario";
             // 
-            // numericUpDown1
+            // IdProductoNumericUpDown
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(155, 37);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 5;
+            this.IdProductoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdProductoNumericUpDown.Location = new System.Drawing.Point(155, 37);
+            this.IdProductoNumericUpDown.Name = "IdProductoNumericUpDown";
+            this.IdProductoNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.IdProductoNumericUpDown.TabIndex = 5;
             // 
-            // textBox1
+            // DescripcionTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(155, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
+            this.DescripcionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripcionTextBox.Location = new System.Drawing.Point(155, 72);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 22);
+            this.DescripcionTextBox.TabIndex = 6;
             // 
-            // numericUpDown2
+            // ExistenciaNumericUpDown
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(155, 99);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown2.TabIndex = 7;
+            this.ExistenciaNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(155, 99);
+            this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
+            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ExistenciaNumericUpDown.TabIndex = 7;
             // 
-            // numericUpDown3
+            // CostoNumericUpDown
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(155, 136);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown3.TabIndex = 8;
+            this.CostoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostoNumericUpDown.Location = new System.Drawing.Point(155, 136);
+            this.CostoNumericUpDown.Name = "CostoNumericUpDown";
+            this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CostoNumericUpDown.TabIndex = 8;
             // 
-            // textBox2
+            // ValorInventarioTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(161, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 9;
+            this.ValorInventarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValorInventarioTextBox.Location = new System.Drawing.Point(161, 168);
+            this.ValorInventarioTextBox.Name = "ValorInventarioTextBox";
+            this.ValorInventarioTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ValorInventarioTextBox.TabIndex = 9;
             // 
             // BuscarButton
             // 
@@ -146,6 +149,7 @@
             this.BuscarButton.TabIndex = 10;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // NuevoButton
             // 
@@ -156,6 +160,7 @@
             this.NuevoButton.TabIndex = 11;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // GuardarButton
             // 
@@ -166,6 +171,7 @@
             this.GuardarButton.TabIndex = 12;
             this.GuardarButton.Text = "GuardarButton";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
@@ -176,6 +182,11 @@
             this.EliminarButton.TabIndex = 13;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // RProductos
             // 
@@ -186,11 +197,11 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.ValorInventarioTextBox);
+            this.Controls.Add(this.CostoNumericUpDown);
+            this.Controls.Add(this.ExistenciaNumericUpDown);
+            this.Controls.Add(this.DescripcionTextBox);
+            this.Controls.Add(this.IdProductoNumericUpDown);
             this.Controls.Add(this.ValorInventario);
             this.Controls.Add(this.Costo);
             this.Controls.Add(this.Existencia);
@@ -198,9 +209,10 @@
             this.Controls.Add(this.IdProducto);
             this.Name = "RProductos";
             this.Text = "RProductos";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,14 +225,15 @@
         private System.Windows.Forms.Label Existencia;
         private System.Windows.Forms.Label Costo;
         private System.Windows.Forms.Label ValorInventario;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.NumericUpDown IdProductoNumericUpDown;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.NumericUpDown ExistenciaNumericUpDown;
+        private System.Windows.Forms.NumericUpDown CostoNumericUpDown;
+        private System.Windows.Forms.TextBox ValorInventarioTextBox;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
