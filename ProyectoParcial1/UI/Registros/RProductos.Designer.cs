@@ -44,10 +44,12 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NotaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotaErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IdProducto
@@ -131,9 +133,9 @@
             0});
             this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(155, 99);
             this.ExistenciaNumericUpDown.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
+            1661992959,
+            1808227885,
+            5,
             0});
             this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
             this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(120, 22);
@@ -152,9 +154,9 @@
             0});
             this.CostoNumericUpDown.Location = new System.Drawing.Point(155, 136);
             this.CostoNumericUpDown.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
+            -559939585,
+            902409669,
+            54,
             0});
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
             this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
@@ -217,6 +219,10 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // NotaErrorProvider
+            // 
+            this.NotaErrorProvider.ContainerControl = this;
+            // 
             // RProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotaErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +271,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.ErrorProvider NotaErrorProvider;
     }
 }

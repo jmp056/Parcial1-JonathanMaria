@@ -17,6 +17,9 @@ namespace ProyectoParcial1.UI.Registros
         public RProductos()
         {
             InitializeComponent();
+            ValorInventarioTextBox.Enabled = false;
+            EliminarButton.Enabled = false;
+            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void Limpiar()
@@ -96,6 +99,8 @@ namespace ProyectoParcial1.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            NotaErrorProvider.Clear();
+            MyErrorProvider.Clear();
             int id;
             Productos producto = new Productos();
             int.TryParse(IdProductoNumericUpDown.Text, out id);
@@ -104,6 +109,7 @@ namespace ProyectoParcial1.UI.Registros
             {
                 MessageBox.Show("Producto encontrado");
                 LlenaCampos(producto);
+                EliminarButton.Enabled = true;
             }
             else
                 MessageBox.Show("Producto no encontrado");
@@ -112,6 +118,10 @@ namespace ProyectoParcial1.UI.Registros
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             Limpiar();
+            MyErrorProvider.Clear();
+            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            EliminarButton.Enabled = false;
+            IdProductoNumericUpDown.Enabled = true;
             DescripcionTextBox.Focus();
         }
 
@@ -123,20 +133,30 @@ namespace ProyectoParcial1.UI.Registros
                 return;
             producto = LlenaClase();
             if (IdProductoNumericUpDown.Value == 0)
+            {
                 paso = ProductosBLL.Guardar(producto);
-            else
+                MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
+            else 
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
                     MessageBox.Show("No se puede modificar un producto que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = ProductosBLL.Modificar(producto);
-            }
-            if (paso)
-                MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+                if (MessageBox.Show("Esta seguro que desea modificar este producto?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                {
+                    paso = ProductosBLL.Modificar(producto);
+                    MessageBox.Show("Modificado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+                else
+                    return;
+            }                
+            if(!paso)
                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
@@ -146,9 +166,15 @@ namespace ProyectoParcial1.UI.Registros
             int.TryParse(IdProductoNumericUpDown.Text, out id);
             Limpiar();
             if (ProductosBLL.Eliminar(id))
-                MessageBox.Show("El producto due eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                MessageBox.Show("El producto fue eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+                IdProductoNumericUpDown.Enabled = true;
+                EliminarButton.Enabled = false;
+            }
             else
                 MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)
