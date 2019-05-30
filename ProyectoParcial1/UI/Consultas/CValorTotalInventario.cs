@@ -19,10 +19,29 @@ namespace ProyectoParcial1.UI.Consultas
             InitializeComponent();
         }
 
-
         private void Button1_Click(object sender, EventArgs e)
         {
+
+            
+
+           /* 
+            Intento #3
             Contexto db = new Contexto();
+            SqlConnection con = new SqlConnection("Data Source=.\SQLEXPRESS;       Initial Catalog=ProyectoParcial1Db;Integrated Security = True");
+            SqlDataReader dr;
+            con.Open();
+            SqlCommand com = new SqlCommand("select sum(ValorEnInventario) from Productos", con);
+            dr = com.ExecuteReader();
+            ValorTotalDeInventarioTextBox.Text = Convert.ToString(dr);*/
+
+
+
+
+
+
+            //Contexto db = new Contexto();
+            //SqlCommand consulta = new SqlCommand("select sum(ValorEnInventario) from Productos", db);
+
             //decimal vit = Convert.ToDecimal(db.Productos.Find(keyValues: "Select sum(ValorEnInventario) from Productos"));
             //= new SqlCommand("select sum(ValorEnInventario) from Productos");
             //ValorTotalDeInventarioTextBox.Text = Convert.ToString(VTI);

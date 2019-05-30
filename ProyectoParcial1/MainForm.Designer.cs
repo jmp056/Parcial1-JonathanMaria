@@ -44,7 +44,7 @@
             this.consulltasToolStripMenuItem});
             this.MyMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MyMenuStrip.Name = "MyMenuStrip";
-            this.MyMenuStrip.Size = new System.Drawing.Size(800, 24);
+            this.MyMenuStrip.Size = new System.Drawing.Size(313, 24);
             this.MyMenuStrip.TabIndex = 0;
             this.MyMenuStrip.Text = "MyMenuStrip";
             // 
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(313, 220);
             this.Controls.Add(this.MyMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MyMenuStrip;

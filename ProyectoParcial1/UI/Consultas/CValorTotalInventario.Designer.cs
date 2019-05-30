@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CValorTotalInventario));
             this.Valortotal = new System.Windows.Forms.Label();
             this.ValorTotalDeInventarioTextBox = new System.Windows.Forms.TextBox();
-            this.ActualizarButton = new System.Windows.Forms.Button();
             this.deInventario = new System.Windows.Forms.Label();
+            this.ActualizarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Valortotal
@@ -55,17 +55,6 @@
             this.ValorTotalDeInventarioTextBox.Size = new System.Drawing.Size(162, 22);
             this.ValorTotalDeInventarioTextBox.TabIndex = 2;
             // 
-            // ActualizarButton
-            // 
-            this.ActualizarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonActualizar;
-            this.ActualizarButton.Location = new System.Drawing.Point(146, 26);
-            this.ActualizarButton.Name = "ActualizarButton";
-            this.ActualizarButton.Size = new System.Drawing.Size(40, 40);
-            this.ActualizarButton.TabIndex = 0;
-            this.ActualizarButton.UseVisualStyleBackColor = true;
-            this.ActualizarButton.UseWaitCursor = true;
-            this.ActualizarButton.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // deInventario
             // 
             this.deInventario.AutoSize = true;
@@ -76,6 +65,16 @@
             this.deInventario.TabIndex = 3;
             this.deInventario.Text = "de inventario:";
             this.deInventario.UseWaitCursor = true;
+            // 
+            // ActualizarButton
+            // 
+            this.ActualizarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonActualizar;
+            this.ActualizarButton.Location = new System.Drawing.Point(146, 26);
+            this.ActualizarButton.Name = "ActualizarButton";
+            this.ActualizarButton.Size = new System.Drawing.Size(40, 40);
+            this.ActualizarButton.TabIndex = 0;
+            this.ActualizarButton.UseVisualStyleBackColor = true;
+            this.ActualizarButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // CValorTotalInventario
             // 
