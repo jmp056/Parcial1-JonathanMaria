@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RProductos));
             this.IdProducto = new System.Windows.Forms.Label();
             this.Descripcion = new System.Windows.Forms.Label();
             this.Existencia = new System.Windows.Forms.Label();
@@ -39,24 +40,26 @@
             this.ExistenciaNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ValorInventarioTextBox = new System.Windows.Forms.TextBox();
-            this.BuscarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.EliminarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.NotaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.AdvertenciaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotaErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // IdProducto
             // 
             this.IdProducto.AutoSize = true;
             this.IdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdProducto.Location = new System.Drawing.Point(38, 42);
+            this.IdProducto.Location = new System.Drawing.Point(20, 24);
             this.IdProducto.Name = "IdProducto";
             this.IdProducto.Size = new System.Drawing.Size(93, 16);
             this.IdProducto.TabIndex = 0;
@@ -66,7 +69,7 @@
             // 
             this.Descripcion.AutoSize = true;
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(38, 72);
+            this.Descripcion.Location = new System.Drawing.Point(20, 64);
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(91, 16);
             this.Descripcion.TabIndex = 1;
@@ -76,7 +79,7 @@
             // 
             this.Existencia.AutoSize = true;
             this.Existencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Existencia.Location = new System.Drawing.Point(38, 103);
+            this.Existencia.Location = new System.Drawing.Point(20, 104);
             this.Existencia.Name = "Existencia";
             this.Existencia.Size = new System.Drawing.Size(79, 16);
             this.Existencia.TabIndex = 2;
@@ -86,7 +89,7 @@
             // 
             this.Costo.AutoSize = true;
             this.Costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Costo.Location = new System.Drawing.Point(38, 136);
+            this.Costo.Location = new System.Drawing.Point(20, 144);
             this.Costo.Name = "Costo";
             this.Costo.Size = new System.Drawing.Size(48, 16);
             this.Costo.TabIndex = 3;
@@ -96,7 +99,7 @@
             // 
             this.ValorInventario.AutoSize = true;
             this.ValorInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValorInventario.Location = new System.Drawing.Point(38, 168);
+            this.ValorInventario.Location = new System.Drawing.Point(20, 184);
             this.ValorInventario.Name = "ValorInventario";
             this.ValorInventario.Size = new System.Drawing.Size(117, 16);
             this.ValorInventario.TabIndex = 4;
@@ -105,22 +108,22 @@
             // IdProductoNumericUpDown
             // 
             this.IdProductoNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdProductoNumericUpDown.Location = new System.Drawing.Point(155, 37);
+            this.IdProductoNumericUpDown.Location = new System.Drawing.Point(145, 24);
             this.IdProductoNumericUpDown.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
             this.IdProductoNumericUpDown.Name = "IdProductoNumericUpDown";
-            this.IdProductoNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.IdProductoNumericUpDown.Size = new System.Drawing.Size(82, 22);
             this.IdProductoNumericUpDown.TabIndex = 5;
             // 
             // DescripcionTextBox
             // 
             this.DescripcionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescripcionTextBox.Location = new System.Drawing.Point(155, 72);
+            this.DescripcionTextBox.Location = new System.Drawing.Point(145, 64);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(100, 22);
+            this.DescripcionTextBox.Size = new System.Drawing.Size(219, 22);
             this.DescripcionTextBox.TabIndex = 6;
             // 
             // ExistenciaNumericUpDown
@@ -131,14 +134,14 @@
             0,
             0,
             0});
-            this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(155, 99);
+            this.ExistenciaNumericUpDown.Location = new System.Drawing.Point(145, 104);
             this.ExistenciaNumericUpDown.Maximum = new decimal(new int[] {
             1661992959,
             1808227885,
             5,
             0});
             this.ExistenciaNumericUpDown.Name = "ExistenciaNumericUpDown";
-            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ExistenciaNumericUpDown.Size = new System.Drawing.Size(121, 22);
             this.ExistenciaNumericUpDown.TabIndex = 7;
             this.ExistenciaNumericUpDown.Tag = "";
             this.ExistenciaNumericUpDown.ValueChanged += new System.EventHandler(this.ExistenciaNumericUpDown_ValueChanged);
@@ -152,82 +155,109 @@
             0,
             0,
             0});
-            this.CostoNumericUpDown.Location = new System.Drawing.Point(155, 136);
+            this.CostoNumericUpDown.Location = new System.Drawing.Point(145, 144);
             this.CostoNumericUpDown.Maximum = new decimal(new int[] {
             -559939585,
             902409669,
             54,
             0});
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
-            this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CostoNumericUpDown.Size = new System.Drawing.Size(121, 22);
             this.CostoNumericUpDown.TabIndex = 8;
             this.CostoNumericUpDown.ValueChanged += new System.EventHandler(this.CostoNumericUpDown_ValueChanged);
             // 
             // ValorInventarioTextBox
             // 
+            this.ValorInventarioTextBox.Enabled = false;
             this.ValorInventarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValorInventarioTextBox.Location = new System.Drawing.Point(161, 168);
+            this.ValorInventarioTextBox.Location = new System.Drawing.Point(145, 184);
             this.ValorInventarioTextBox.Name = "ValorInventarioTextBox";
-            this.ValorInventarioTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ValorInventarioTextBox.Size = new System.Drawing.Size(121, 22);
             this.ValorInventarioTextBox.TabIndex = 9;
-            // 
-            // BuscarButton
-            // 
-            this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarButton.Location = new System.Drawing.Point(307, 34);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarButton.TabIndex = 10;
-            this.BuscarButton.Text = "Buscar";
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
-            // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoButton.Location = new System.Drawing.Point(42, 205);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 23);
-            this.NuevoButton.TabIndex = 11;
-            this.NuevoButton.Text = "Nuevo";
-            this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarButton.Location = new System.Drawing.Point(161, 205);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 23);
-            this.GuardarButton.TabIndex = 12;
-            this.GuardarButton.Text = "GuardarButton";
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarButton.Location = new System.Drawing.Point(307, 205);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 23);
-            this.EliminarButton.TabIndex = 13;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // NotaErrorProvider
+            // AdvertenciaErrorProvider
             // 
-            this.NotaErrorProvider.ContainerControl = this;
+            this.AdvertenciaErrorProvider.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ProyectoParcial1.Properties.Resources.Empaque;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(291, 123);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 64);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Enabled = false;
+            this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarButton.Location = new System.Drawing.Point(282, 227);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(90, 30);
+            this.EliminarButton.TabIndex = 13;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonGuardar;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuardarButton.Location = new System.Drawing.Point(145, 227);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(90, 30);
+            this.GuardarButton.TabIndex = 12;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoButton.Image = global::ProyectoParcial1.Properties.Resources.BotonNuevo;
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NuevoButton.Location = new System.Drawing.Point(15, 227);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(90, 30);
+            this.NuevoButton.TabIndex = 11;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Enabled = false;
+            this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonBuscar;
+            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarButton.Location = new System.Drawing.Point(264, 15);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(88, 35);
+            this.BuscarButton.TabIndex = 10;
+            this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // RProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(384, 280);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -242,13 +272,15 @@
             this.Controls.Add(this.Existencia);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.IdProducto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RProductos";
-            this.Text = "RProductos";
+            this.Text = "Registro de productos";
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotaErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +302,8 @@
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
-        private System.Windows.Forms.ErrorProvider NotaErrorProvider;
+        private System.Windows.Forms.ErrorProvider AdvertenciaErrorProvider;
     }
 }

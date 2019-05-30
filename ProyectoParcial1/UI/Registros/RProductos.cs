@@ -17,9 +17,7 @@ namespace ProyectoParcial1.UI.Registros
         public RProductos()
         {
             InitializeComponent();
-            ValorInventarioTextBox.Enabled = false;
-            EliminarButton.Enabled = false;
-            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void Limpiar()
@@ -99,7 +97,7 @@ namespace ProyectoParcial1.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            NotaErrorProvider.Clear();
+            AdvertenciaErrorProvider.Clear();
             MyErrorProvider.Clear();
             int id;
             Productos producto = new Productos();
@@ -119,9 +117,8 @@ namespace ProyectoParcial1.UI.Registros
         {
             Limpiar();
             MyErrorProvider.Clear();
-            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
             EliminarButton.Enabled = false;
-            IdProductoNumericUpDown.Enabled = true;
             DescripcionTextBox.Focus();
         }
 
@@ -156,7 +153,7 @@ namespace ProyectoParcial1.UI.Registros
             }                
             if(!paso)
                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
@@ -174,7 +171,7 @@ namespace ProyectoParcial1.UI.Registros
             }
             else
                 MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            NotaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
         }
 
         private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)
