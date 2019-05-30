@@ -36,6 +36,7 @@ namespace ProyectoParcial1.UI.Registros
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existencia = Convert.ToInt32(ExistenciaNumericUpDown.Value);
             producto.Costo = Convert.ToSingle(CostoNumericUpDown.Value);
+            producto.ValorEnInventario = Convert.ToSingle(ValorInventarioTextBox.Text);
             return producto;
         }
 
@@ -45,7 +46,7 @@ namespace ProyectoParcial1.UI.Registros
             DescripcionTextBox.Text = producto.Descripcion;
             ExistenciaNumericUpDown.Value = producto.Existencia;
             CostoNumericUpDown.Value = Convert.ToDecimal(producto.Costo);
-            ValorInventarioTextBox.Text = Convert.ToString(producto.Existencia * producto.Costo);
+            ValorInventarioTextBox.Text = Convert.ToString(producto.ValorEnInventario);
         }
 
         private bool Validar()

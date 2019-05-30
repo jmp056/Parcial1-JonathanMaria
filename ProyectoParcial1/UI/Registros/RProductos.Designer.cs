@@ -239,7 +239,6 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Enabled = false;
             this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonBuscar;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
