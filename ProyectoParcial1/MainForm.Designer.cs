@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consulltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorDelInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,13 @@
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registroToolStripMenuItem.Text = "Registros";
             // 
+            // registroDeProductosToolStripMenuItem
+            // 
+            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
+            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
+            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
+            // 
             // consulltasToolStripMenuItem
             // 
             this.consulltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -63,18 +70,12 @@
             this.consulltasToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.consulltasToolStripMenuItem.Text = "Consulltas";
             // 
-            // registroDeProductosToolStripMenuItem
-            // 
-            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
-            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
-            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
-            // 
             // valorDelInventarioToolStripMenuItem
             // 
             this.valorDelInventarioToolStripMenuItem.Name = "valorDelInventarioToolStripMenuItem";
             this.valorDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.valorDelInventarioToolStripMenuItem.Text = "Valor del inventario";
+            this.valorDelInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorDelInventarioToolStripMenuItem_Click);
             // 
             // MainForm
             // 

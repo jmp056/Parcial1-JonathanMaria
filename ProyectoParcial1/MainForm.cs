@@ -1,4 +1,5 @@
-﻿using ProyectoParcial1.UI.Registros;
+﻿using ProyectoParcial1.UI.Consultas;
+using ProyectoParcial1.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,12 @@ namespace ProyectoParcial1
         {
             RProductos Rp = new RProductos();
             Rp.Show();
+        }
+
+        private void ValorDelInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CValorTotalInventario Cv = new CValorTotalInventario();
+            Cv.Show();
         }
     }
 }
