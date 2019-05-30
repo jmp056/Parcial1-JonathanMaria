@@ -26,7 +26,7 @@ namespace ProyectoParcial1.UI.Consultas
             //decimal vit = Convert.ToDecimal(db.Productos.Find(keyValues: "Select sum(ValorEnInventario) from Productos"));
             //= new SqlCommand("select sum(ValorEnInventario) from Productos");
             //ValorTotalDeInventarioTextBox.Text = Convert.ToString(VTI);
-            ValorTotalDeInventarioTextBox.Text = Convert.ToString(db.Productos.Find(ValueType: "Select sum(ValorEnInventario) from Productos"));
+            //ValorTotalDeInventarioTextBox.Text = Convert.ToString(db.Productos.Find(ValueType: "Select sum(ValorEnInventario) from Productos"));
         }
     }
 }

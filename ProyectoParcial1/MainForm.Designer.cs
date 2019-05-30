@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.MyMenuStrip = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorDelInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.registroDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MyMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // MyMenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MyMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroToolStripMenuItem,
             this.consulltasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "MyMenuStrip";
+            this.MyMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MyMenuStrip.Name = "MyMenuStrip";
+            this.MyMenuStrip.Size = new System.Drawing.Size(800, 24);
+            this.MyMenuStrip.TabIndex = 0;
+            this.MyMenuStrip.Text = "MyMenuStrip";
             // 
             // registroToolStripMenuItem
             // 
@@ -54,13 +55,6 @@
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registroToolStripMenuItem.Text = "Registros";
-            // 
-            // registroDeProductosToolStripMenuItem
-            // 
-            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
-            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
-            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
             // 
             // consulltasToolStripMenuItem
             // 
@@ -72,22 +66,32 @@
             // 
             // valorDelInventarioToolStripMenuItem
             // 
+            this.valorDelInventarioToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenConsulta;
             this.valorDelInventarioToolStripMenuItem.Name = "valorDelInventarioToolStripMenuItem";
             this.valorDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.valorDelInventarioToolStripMenuItem.Text = "Valor del inventario";
             this.valorDelInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorDelInventarioToolStripMenuItem_Click);
+            // 
+            // registroDeProductosToolStripMenuItem
+            // 
+            this.registroDeProductosToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenRegistro;
+            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
+            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
+            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.MyMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.MyMenuStrip;
             this.Name = "MainForm";
-            this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "Menu Principal";
+            this.MyMenuStrip.ResumeLayout(false);
+            this.MyMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,7 +99,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip MyMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consulltasToolStripMenuItem;
