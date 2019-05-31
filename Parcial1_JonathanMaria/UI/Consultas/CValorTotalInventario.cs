@@ -29,10 +29,10 @@ namespace Parcial1_JonathanMaria.UI.Consultas
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
 
-            double tot = 0;
+            decimal tot = 0;
             foreach(DataGridViewRow produ in ConsultaDataGridView.Rows)
             {
-                tot += Convert.ToDouble(produ.Cells["ValorEnInventario"].Value);
+                tot += Convert.ToDecimal(produ.Cells["ValorEnInventario"].Value);
             }
             ValorTotalDeInventarioTextBox.Text = Convert.ToString(tot);
         }
