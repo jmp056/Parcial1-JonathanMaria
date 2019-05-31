@@ -1,3 +1,0 @@
-create database ProyectoParcial1Db
-Go
-Use ProyectoParcial1Db
