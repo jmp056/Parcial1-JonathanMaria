@@ -1,5 +1,5 @@
-﻿using ProyectoParcial1.UI.Consultas;
-using ProyectoParcial1.UI.Registros;
+﻿using Parcial1_JonathanMaria.UI.Consultas;
+using Parcial1_JonathanMaria.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoParcial1
+namespace Parcial1_JonathanMaria
 {
     public partial class MainForm : Form
     {

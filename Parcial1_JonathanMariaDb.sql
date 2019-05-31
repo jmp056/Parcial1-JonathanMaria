@@ -6,7 +6,7 @@ create table Productos
 (
 	IdProducto int primary key identity,
 	Descripcion varchar(40),
-	Existencia Real,
+	Existencia int,
 	Costo real,
 	ValorEnInventario real
 )

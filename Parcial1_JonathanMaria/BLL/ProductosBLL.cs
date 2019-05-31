@@ -1,12 +1,12 @@
-﻿using ProyectoParcial1.DAL;
-using ProyectoParcial1.Entidades;
+﻿using Parcial1_JonathanMaria.DAL;
+using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace ProyectoParcial1.BLL
+namespace Parcial1_JonathanMaria.BLL
 {
     public class ProductosBLL
     {

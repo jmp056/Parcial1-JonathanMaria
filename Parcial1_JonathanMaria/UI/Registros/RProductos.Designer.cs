@@ -1,4 +1,4 @@
-﻿namespace ProyectoParcial1.UI.Registros
+﻿namespace Parcial1_JonathanMaria.UI.Registros
 {
     partial class RProductos
     {

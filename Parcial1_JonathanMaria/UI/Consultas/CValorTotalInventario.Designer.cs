@@ -1,4 +1,4 @@
-﻿namespace ProyectoParcial1.UI.Consultas
+﻿namespace Parcial1_JonathanMaria.UI.Consultas
 {
     partial class CValorTotalInventario
     {

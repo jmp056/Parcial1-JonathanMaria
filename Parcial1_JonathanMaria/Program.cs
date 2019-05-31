@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoParcial1
+namespace Parcial1_JonathanMaria
 {
     static class Program
     {

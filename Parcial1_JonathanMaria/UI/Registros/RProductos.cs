@@ -1,5 +1,5 @@
-﻿using ProyectoParcial1.BLL;
-using ProyectoParcial1.Entidades;
+﻿using Parcial1_JonathanMaria.BLL;
+using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoParcial1.UI.Registros
+namespace Parcial1_JonathanMaria.UI.Registros
 {
     public partial class RProductos : Form
     {
@@ -104,14 +104,17 @@ namespace ProyectoParcial1.UI.Registros
             Productos producto = new Productos();
             int.TryParse(IdProductoNumericUpDown.Text, out id);
             producto = ProductosBLL.Buscar(id);
-            if(producto != null)
+            if (producto != null)
             {
                 MessageBox.Show("Producto encontrado");
                 LlenaCampos(producto);
                 EliminarButton.Enabled = true;
             }
             else
+            {
                 MessageBox.Show("Producto no encontrado");
+                AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            }
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
@@ -159,20 +162,25 @@ namespace ProyectoParcial1.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            MyErrorProvider.Clear();
-            int id;
-            int.TryParse(IdProductoNumericUpDown.Text, out id);
-            Limpiar();
-            if (ProductosBLL.Eliminar(id))
+            if (MessageBox.Show("Esta seguro que desea eliminar este producto?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
-                MessageBox.Show("El producto fue eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyErrorProvider.Clear();
+                int id;
+                int.TryParse(IdProductoNumericUpDown.Text, out id);
                 Limpiar();
-                IdProductoNumericUpDown.Enabled = true;
-                EliminarButton.Enabled = false;
+                if (ProductosBLL.Eliminar(id))
+                {
+                    MessageBox.Show("El producto fue eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    IdProductoNumericUpDown.Enabled = true;
+                    EliminarButton.Enabled = false;
+                }
+                else
+                    MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
             }
             else
-                MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+                return;
         }
 
         private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)

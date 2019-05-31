@@ -1,4 +1,4 @@
-﻿using ProyectoParcial1.Entidades;
+﻿using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoParcial1.DAL
+namespace Parcial1_JonathanMaria.DAL
 {
     public class Contexto : DbContext
     {

@@ -1,4 +1,4 @@
-﻿using ProyectoParcial1.DAL;
+﻿using Parcial1_JonathanMaria.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoParcial1.Entidades;
-using ProyectoParcial1.BLL;
+using Parcial1_JonathanMaria.Entidades;
+using Parcial1_JonathanMaria.BLL;
 
-namespace ProyectoParcial1.UI.Consultas
+namespace Parcial1_JonathanMaria.UI.Consultas
 {
     public partial class CValorTotalInventario : Form
     {
@@ -34,6 +34,7 @@ namespace ProyectoParcial1.UI.Consultas
             {
                 tot += Convert.ToDouble(produ.Cells["ValorEnInventario"].Value);
             }
+            ValorTotalDeInventarioTextBox.Text = Convert.ToString(tot);
         }
     }
 }
