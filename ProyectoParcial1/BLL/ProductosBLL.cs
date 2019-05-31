@@ -90,5 +90,24 @@ namespace ProyectoParcial1.BLL
             }
             return producto;
         }
+
+        public static List<Productos> GetList(Expression<Func<Productos, bool>> producto)
+        {
+            List<Productos> Lista = new List<Productos>();
+            Contexto db = new Contexto();
+            try
+            {
+                Lista = db.Productos.Where(producto).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+            return Lista;
+        }
     }
 }

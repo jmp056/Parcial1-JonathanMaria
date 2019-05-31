@@ -33,6 +33,8 @@
             this.ValorTotalDeInventarioTextBox = new System.Windows.Forms.TextBox();
             this.deInventario = new System.Windows.Forms.Label();
             this.ActualizarButton = new System.Windows.Forms.Button();
+            this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Valortotal
@@ -74,13 +76,23 @@
             this.ActualizarButton.Size = new System.Drawing.Size(40, 40);
             this.ActualizarButton.TabIndex = 0;
             this.ActualizarButton.UseVisualStyleBackColor = true;
-            this.ActualizarButton.Click += new System.EventHandler(this.Button1_Click);
+            this.ActualizarButton.Click += new System.EventHandler(this.ActualizarButton_Click);
+            // 
+            // ConsultaDataGridView
+            // 
+            this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(24, 6);
+            this.ConsultaDataGridView.Name = "ConsultaDataGridView";
+            this.ConsultaDataGridView.Size = new System.Drawing.Size(21, 17);
+            this.ConsultaDataGridView.TabIndex = 4;
+            this.ConsultaDataGridView.Visible = false;
             // 
             // CValorTotalInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 120);
+            this.ClientSize = new System.Drawing.Size(203, 120);
+            this.Controls.Add(this.ConsultaDataGridView);
             this.Controls.Add(this.deInventario);
             this.Controls.Add(this.ValorTotalDeInventarioTextBox);
             this.Controls.Add(this.Valortotal);
@@ -88,6 +100,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CValorTotalInventario";
             this.Text = "Valor total de Inventario";
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Label Valortotal;
         private System.Windows.Forms.TextBox ValorTotalDeInventarioTextBox;
         private System.Windows.Forms.Label deInventario;
+        private System.Windows.Forms.DataGridView ConsultaDataGridView;
     }
 }
