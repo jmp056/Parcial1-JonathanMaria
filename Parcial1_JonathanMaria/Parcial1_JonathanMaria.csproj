@@ -56,6 +56,7 @@
     <Compile Include="BLL\ProductosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\TotalEnInventario.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
