@@ -260,6 +260,7 @@
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
             this.ConsultaDataGridView.Size = new System.Drawing.Size(22, 24);
             this.ConsultaDataGridView.TabIndex = 15;
+            this.ConsultaDataGridView.Visible = false;
             // 
             // RProductos
             // 
