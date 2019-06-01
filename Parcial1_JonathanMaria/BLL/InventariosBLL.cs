@@ -1,15 +1,12 @@
-﻿using Parcial1_JonathanMaria.BLL;
-using Parcial1_JonathanMaria.DAL;
+﻿using Parcial1_JonathanMaria.DAL;
 using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProyectoParcial1.BLL
+namespace Parcial1_JonathanMaria.BLL
 {
     public class InventariosBLL
     {

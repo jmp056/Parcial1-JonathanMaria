@@ -37,7 +37,6 @@
             // 
             // ActualizarButton
             // 
-            this.ActualizarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonActualizar;
             this.ActualizarButton.Location = new System.Drawing.Point(147, 21);
             this.ActualizarButton.Name = "ActualizarButton";
             this.ActualizarButton.Size = new System.Drawing.Size(50, 50);

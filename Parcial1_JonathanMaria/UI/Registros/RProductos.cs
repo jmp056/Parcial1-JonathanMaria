@@ -1,6 +1,5 @@
 ﻿using Parcial1_JonathanMaria.BLL;
 using Parcial1_JonathanMaria.Entidades;
-using ProyectoParcial1.BLL;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

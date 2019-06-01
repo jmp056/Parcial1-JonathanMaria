@@ -58,7 +58,6 @@
             // 
             // registroDeProductosToolStripMenuItem
             // 
-            this.registroDeProductosToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenRegistro;
             this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
             this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
@@ -74,7 +73,6 @@
             // 
             // valorDelInventarioToolStripMenuItem
             // 
-            this.valorDelInventarioToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenConsulta;
             this.valorDelInventarioToolStripMenuItem.Name = "valorDelInventarioToolStripMenuItem";
             this.valorDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.valorDelInventarioToolStripMenuItem.Text = "Valor del inventario";

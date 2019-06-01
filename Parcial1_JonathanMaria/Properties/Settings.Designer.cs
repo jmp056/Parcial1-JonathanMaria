@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoParcial1.Properties
+namespace Parcial1_JonathanMaria.Properties
 {
 
 

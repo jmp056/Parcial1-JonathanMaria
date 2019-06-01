@@ -187,7 +187,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::ProyectoParcial1.Properties.Resources.Empaque;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(291, 123);
@@ -200,7 +199,6 @@
             // 
             this.EliminarButton.Enabled = false;
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarButton.Location = new System.Drawing.Point(282, 227);
             this.EliminarButton.Name = "EliminarButton";
@@ -214,7 +212,6 @@
             // GuardarButton
             // 
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonGuardar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarButton.Location = new System.Drawing.Point(145, 227);
             this.GuardarButton.Name = "GuardarButton";
@@ -228,7 +225,6 @@
             // NuevoButton
             // 
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoButton.Image = global::ProyectoParcial1.Properties.Resources.BotonNuevo;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoButton.Location = new System.Drawing.Point(15, 227);
             this.NuevoButton.Name = "NuevoButton";
@@ -242,7 +238,6 @@
             // BuscarButton
             // 
             this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonBuscar;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(264, 15);
             this.BuscarButton.Name = "BuscarButton";
@@ -256,7 +251,7 @@
             // ConsultaDataGridView
             // 
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Location = new System.Drawing.Point(273, 93);
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(291, 93);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
             this.ConsultaDataGridView.Size = new System.Drawing.Size(22, 24);
             this.ConsultaDataGridView.TabIndex = 15;
@@ -283,7 +278,6 @@
             this.Controls.Add(this.Existencia);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.IdProducto);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RProductos";
             this.Text = "Registro de productos";
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).EndInit();
