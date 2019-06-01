@@ -1,6 +1,8 @@
 ﻿using Parcial1_JonathanMaria.BLL;
 using Parcial1_JonathanMaria.Entidades;
+using ProyectoParcial1.BLL;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Parcial1_JonathanMaria.UI.Registros
@@ -82,6 +84,26 @@ namespace Parcial1_JonathanMaria.UI.Registros
             return paso;
         }
 
+        private void ActualizaInventario()
+        {
+            Inventarios inventario = new Inventarios();
+            var listado = new List<Productos>();
+            listado = ProductosBLL.GetList(p => true);
+            ConsultaDataGridView.DataSource = null;
+            ConsultaDataGridView.DataSource = listado;
+            double tot = 0;
+            foreach (DataGridViewRow produ in ConsultaDataGridView.Rows)
+            {
+                tot += Convert.ToDouble(produ.Cells["ValorEnInventario"].Value);
+            }
+            inventario.Id = 1;
+            inventario.Valor = Convert.ToSingle(tot);
+            if (InventariosBLL.Buscar(1) == null)
+                InventariosBLL.Guardar(inventario);
+            else
+                InventariosBLL.Modificar(inventario);
+        }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             Productos producto = ProductosBLL.Buscar((int)IdProductoNumericUpDown.Value);
@@ -150,6 +172,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             if(!paso)
                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            ActualizaInventario();
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
@@ -173,6 +196,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             }
             else
                 return;
+            ActualizaInventario();
         }
 
         private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)

@@ -47,12 +47,14 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // IdProducto
@@ -251,11 +253,20 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // ConsultaDataGridView
+            // 
+            this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(273, 93);
+            this.ConsultaDataGridView.Name = "ConsultaDataGridView";
+            this.ConsultaDataGridView.Size = new System.Drawing.Size(22, 24);
+            this.ConsultaDataGridView.TabIndex = 15;
+            // 
             // RProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 280);
+            this.Controls.Add(this.ConsultaDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -280,6 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +316,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.ErrorProvider AdvertenciaErrorProvider;
+        private System.Windows.Forms.DataGridView ConsultaDataGridView;
     }
 }

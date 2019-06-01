@@ -15,16 +15,8 @@ namespace Parcial1_JonathanMaria.UI.Consultas
 
         private void ActualizarButton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Productos>();
-            listado = ProductosBLL.GetList(p => true);
-            ConsultaDataGridView.DataSource = null;
-            ConsultaDataGridView.DataSource = listado;
-            double tot = 0;
-            foreach (DataGridViewRow produ in ConsultaDataGridView.Rows)
-            {
-                tot += Convert.ToDouble(produ.Cells["ValorEnInventario"].Value);
-            }
-            ValorInventarioTextBox.Text = Convert.ToString(tot);
+            
+            //ValorInventarioTextBox.Text = Convert.ToString(tot);
         }
     }
 }

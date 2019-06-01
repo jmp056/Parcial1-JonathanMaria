@@ -30,8 +30,6 @@
         {
             this.ActualizarButton = new System.Windows.Forms.Button();
             this.ValorInventarioTextBox = new System.Windows.Forms.TextBox();
-            this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // ActualizarButton
@@ -51,25 +49,15 @@
             this.ValorInventarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.ValorInventarioTextBox.TabIndex = 1;
             // 
-            // ConsultaDataGridView
-            // 
-            this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Location = new System.Drawing.Point(24, 12);
-            this.ConsultaDataGridView.Name = "ConsultaDataGridView";
-            this.ConsultaDataGridView.Size = new System.Drawing.Size(23, 19);
-            this.ConsultaDataGridView.TabIndex = 2;
-            // 
             // CValorTotalInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 158);
-            this.Controls.Add(this.ConsultaDataGridView);
             this.Controls.Add(this.ValorInventarioTextBox);
             this.Controls.Add(this.ActualizarButton);
             this.Name = "CValorTotalInventario";
             this.Text = "CValorTotalInventario";
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,6 +67,5 @@
 
         private System.Windows.Forms.Button ActualizarButton;
         private System.Windows.Forms.TextBox ValorInventarioTextBox;
-        private System.Windows.Forms.DataGridView ConsultaDataGridView;
     }
 }

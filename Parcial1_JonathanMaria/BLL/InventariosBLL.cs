@@ -1,4 +1,5 @@
-﻿using Parcial1_JonathanMaria.DAL;
+﻿using Parcial1_JonathanMaria.BLL;
+using Parcial1_JonathanMaria.DAL;
 using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Collections.Generic;
