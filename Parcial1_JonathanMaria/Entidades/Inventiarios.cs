@@ -5,8 +5,8 @@ namespace Parcial1_JonathanMaria.Entidades
     public class Inventarios
     {
         [Key]
-        public int Id;
-        public float Valor;
+        public int Id { get; set; }
+        public float Valor { get; set; }
 
         public Inventarios()
         {
