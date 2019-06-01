@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Parcial1_JonathanMaria.Entidades;
 using Parcial1_JonathanMaria.BLL;
+using ProyectoParcial1.Entidades;
 
 namespace Parcial1_JonathanMaria.UI.Consultas
 {
@@ -21,9 +22,17 @@ namespace Parcial1_JonathanMaria.UI.Consultas
             InitializeComponent();
         }
 
+        private ValorTotalDeInventario LlenaClase()
+        {
+            ValorTotalInventario valortotalinventario = new ValorTotalInventario();
+            //producto.IdProducto = Convert.ToInt32(IdProductoNumericUpDown.Value);
+            return valortotalinventario;
+        }
         private void ActualizarButton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Productos>();
+            ValorTotalDeInventario valortotaldeinventario;
+
+            /*var listado = new List<Productos>();
             listado = ProductosBLL.GetList(p => true);
 
             ConsultaDataGridView.DataSource = null;
@@ -35,6 +44,7 @@ namespace Parcial1_JonathanMaria.UI.Consultas
                 tot += Convert.ToDecimal(produ.Cells["ValorEnInventario"].Value);
             }
             ValorTotalDeInventarioTextBox.Text = Convert.ToString(tot);
+            */
         }
     }
 }
