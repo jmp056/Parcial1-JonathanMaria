@@ -135,8 +135,9 @@
   <ItemGroup>
     <None Include="Resources\ImagenRegistro.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DAL\Scripts\" />
+    <Content Include="DAL\Scripts\Parcial1_JonathanMariaDb.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
