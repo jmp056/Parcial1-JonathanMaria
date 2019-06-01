@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MyMenuStrip = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valorDelInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MyMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,13 +56,6 @@
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registroToolStripMenuItem.Text = "Registros";
             // 
-            // registroDeProductosToolStripMenuItem
-            // 
-            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
-            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
-            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
-            // 
             // consulltasToolStripMenuItem
             // 
             this.consulltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,10 +66,19 @@
             // 
             // valorDelInventarioToolStripMenuItem
             // 
+            this.valorDelInventarioToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenConsulta;
             this.valorDelInventarioToolStripMenuItem.Name = "valorDelInventarioToolStripMenuItem";
-            this.valorDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.valorDelInventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.valorDelInventarioToolStripMenuItem.Text = "Valor del inventario";
             this.valorDelInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorDelInventarioToolStripMenuItem_Click);
+            // 
+            // registroDeProductosToolStripMenuItem
+            // 
+            this.registroDeProductosToolStripMenuItem.Image = global::ProyectoParcial1.Properties.Resources.ImagenRegistro;
+            this.registroDeProductosToolStripMenuItem.Name = "registroDeProductosToolStripMenuItem";
+            this.registroDeProductosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.registroDeProductosToolStripMenuItem.Text = "Registro de productos";
+            this.registroDeProductosToolStripMenuItem.Click += new System.EventHandler(this.RegistroDeProductosToolStripMenuItem_Click);
             // 
             // MainForm
             // 

@@ -29,20 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CValorTotalInventario));
-            this.ActualizarButton = new System.Windows.Forms.Button();
             this.ValorInventarioTextBox = new System.Windows.Forms.TextBox();
             this.ValorTotal = new System.Windows.Forms.Label();
             this.DeInventario = new System.Windows.Forms.Label();
+            this.ActualizarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // ActualizarButton
-            // 
-            this.ActualizarButton.Location = new System.Drawing.Point(147, 21);
-            this.ActualizarButton.Name = "ActualizarButton";
-            this.ActualizarButton.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarButton.TabIndex = 0;
-            this.ActualizarButton.UseVisualStyleBackColor = true;
-            this.ActualizarButton.Click += new System.EventHandler(this.ActualizarButton_Click);
             // 
             // ValorInventarioTextBox
             // 
@@ -71,6 +62,16 @@
             this.DeInventario.Size = new System.Drawing.Size(102, 16);
             this.DeInventario.TabIndex = 3;
             this.DeInventario.Text = "de inventario:";
+            // 
+            // ActualizarButton
+            // 
+            this.ActualizarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonActualizar;
+            this.ActualizarButton.Location = new System.Drawing.Point(147, 21);
+            this.ActualizarButton.Name = "ActualizarButton";
+            this.ActualizarButton.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarButton.TabIndex = 0;
+            this.ActualizarButton.UseVisualStyleBackColor = true;
+            this.ActualizarButton.Click += new System.EventHandler(this.ActualizarButton_Click);
             // 
             // CValorTotalInventario
             // 
