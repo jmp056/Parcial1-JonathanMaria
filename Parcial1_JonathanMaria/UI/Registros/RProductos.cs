@@ -201,12 +201,12 @@ namespace Parcial1_JonathanMaria.UI.Registros
 
         private void ExistenciaNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            ValorInventarioTextBox.Text = Convert.ToString(ExistenciaNumericUpDown.Value * CostoNumericUpDown.Value);
+            ValorInventarioTextBox.Text = Convert.ToString(Convert.ToInt32(ExistenciaNumericUpDown.Value) * CostoNumericUpDown.Value);
         }
 
         private void CostoNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            ValorInventarioTextBox.Text = Convert.ToString(ExistenciaNumericUpDown.Value * CostoNumericUpDown.Value);
+            ValorInventarioTextBox.Text = Convert.ToString(Convert.ToInt32(ExistenciaNumericUpDown.Value) * CostoNumericUpDown.Value);
         }
     }
 }
