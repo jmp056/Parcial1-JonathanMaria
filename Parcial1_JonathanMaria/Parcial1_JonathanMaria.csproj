@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\CValorTotalInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\CValorTotalInventario.Designer.cs">
+      <DependentUpon>CValorTotalInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\CValorTotalInventario.resx">
+      <DependentUpon>CValorTotalInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RProductos.resx">
       <DependentUpon>RProductos.cs</DependentUpon>
@@ -127,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\Scripts\" />
-    <Folder Include="UI\Consultas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
