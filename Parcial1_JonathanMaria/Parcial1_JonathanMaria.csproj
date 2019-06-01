@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ProductosBLL.cs" />
-    <Compile Include="BLL\InventariosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Entidades\Inventiarios.cs" />
@@ -71,12 +70,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\CValorTotalInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\CValorTotalInventario.Designer.cs">
-      <DependentUpon>CValorTotalInventario.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Registros\RProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +83,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\CValorTotalInventario.resx">
-      <DependentUpon>CValorTotalInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RProductos.resx">
       <DependentUpon>RProductos.cs</DependentUpon>
@@ -110,9 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DAL\Scripts\Parcial1_JonathanMariaDb.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Empaque.jpg" />
@@ -137,6 +124,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImagenRegistro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\Scripts\" />
+    <Folder Include="UI\Consultas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

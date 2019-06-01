@@ -32,7 +32,6 @@ namespace Parcial1_JonathanMaria.UI.Registros
             producto.ValorEnInventario = Convert.ToSingle(ValorInventarioTextBox.Text);
             return producto;
         }
-
         private void LlenaCampos(Productos producto)
         {
             IdProductoNumericUpDown.Value = producto.IdProducto;
