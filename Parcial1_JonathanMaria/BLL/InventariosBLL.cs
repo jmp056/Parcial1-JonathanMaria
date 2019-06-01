@@ -5,9 +5,9 @@ using System.Data.Entity;
 
 namespace Parcial1_JonathanMaria.BLL
 {
-    class InventariosBLL
+    public class InventariosBLL
     {
-        public static bool Guardar(Inventarios inventario)
+        public static bool Nuevo(Inventarios inventario)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -27,7 +27,7 @@ namespace Parcial1_JonathanMaria.BLL
             return paso;
         }
 
-        public static bool Modificar(Inventarios inventario)
+        public static bool Existente(Inventarios inventario)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -45,6 +45,25 @@ namespace Parcial1_JonathanMaria.BLL
                 db.Dispose();
             }
             return paso;
+        }
+
+        public static Inventarios Buscar(int id)
+        {
+            Contexto db = new Contexto();
+           Inventarios inventario = new Inventarios();
+            try
+            {
+                inventario = db.Inventarios.Find(id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+            return inventario;
         }
     }
 }

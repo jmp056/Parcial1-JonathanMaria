@@ -1,17 +1,8 @@
-﻿using Parcial1_JonathanMaria.DAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Parcial1_JonathanMaria.BLL;
 using Parcial1_JonathanMaria.Entidades;
-using Parcial1_JonathanMaria.BLL;
-using ProyectoParcial1.Entidades;
+using System;
+using System.Windows.Forms;
+
 
 namespace Parcial1_JonathanMaria.UI.Consultas
 {
@@ -22,15 +13,24 @@ namespace Parcial1_JonathanMaria.UI.Consultas
             InitializeComponent();
         }
 
-        private ValorTotalDeInventario LlenaClase()
+        private Inventarios LlenaClase()
         {
-            ValorTotalInventario valortotalinventario = new ValorTotalInventario();
-            //producto.IdProducto = Convert.ToInt32(IdProductoNumericUpDown.Value);
-            return valortotalinventario;
+            Inventarios inventario = new Inventarios();
+            return inventario;
         }
         private void ActualizarButton_Click(object sender, EventArgs e)
         {
-            ValorTotalDeInventario valortotaldeinventario;
+            int id = 1;
+            Inventarios inventario = new Inventarios();
+            inventario = InventariosBLL.Buscar(id);
+            if(inventario != null)
+            {
+                ValorTotalDeInventarioTextBox.Text = Convert.ToString(0);
+            }
+            else
+            {
+                ValorTotalDeInventarioTextBox.Text = Convert.ToString(inventario.Valor);
+            }
 
             /*var listado = new List<Productos>();
             listado = ProductosBLL.GetList(p => true);
