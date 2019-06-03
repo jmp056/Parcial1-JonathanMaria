@@ -85,6 +85,12 @@
     <Compile Include="UI\Registros\RProductos.Designer.cs">
       <DependentUpon>RProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\RUbicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RUbicaciones.Designer.cs">
+      <DependentUpon>RUbicaciones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RProductos.resx">
       <DependentUpon>RProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RUbicaciones.resx">
+      <DependentUpon>RUbicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
