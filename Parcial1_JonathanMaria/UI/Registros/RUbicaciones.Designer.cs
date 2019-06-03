@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
-            this.IdUbicacionNumericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.IdUbicacionNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdUbicacionNumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdUbicacionNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // BuscarButton
@@ -49,10 +49,11 @@
             this.BuscarButton.TabIndex = 0;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // errorProvider1
+            // MyErrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // DescripcionTextBox
             // 
@@ -61,12 +62,12 @@
             this.DescripcionTextBox.Size = new System.Drawing.Size(100, 20);
             this.DescripcionTextBox.TabIndex = 3;
             // 
-            // IdUbicacionNumericUpDown1
+            // IdUbicacionNumericUpDown
             // 
-            this.IdUbicacionNumericUpDown1.Location = new System.Drawing.Point(110, 13);
-            this.IdUbicacionNumericUpDown1.Name = "IdUbicacionNumericUpDown1";
-            this.IdUbicacionNumericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.IdUbicacionNumericUpDown1.TabIndex = 4;
+            this.IdUbicacionNumericUpDown.Location = new System.Drawing.Point(110, 13);
+            this.IdUbicacionNumericUpDown.Name = "IdUbicacionNumericUpDown";
+            this.IdUbicacionNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.IdUbicacionNumericUpDown.TabIndex = 4;
             // 
             // NuevoButton
             // 
@@ -106,13 +107,13 @@
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Controls.Add(this.IdUbicacionNumericUpDown1);
+            this.Controls.Add(this.IdUbicacionNumericUpDown);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.BuscarButton);
             this.Name = "RUbicaciones";
             this.Text = "RUbicaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IdUbicacionNumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdUbicacionNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,8 +122,8 @@
         #endregion
 
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.NumericUpDown IdUbicacionNumericUpDown1;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.NumericUpDown IdUbicacionNumericUpDown;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;
