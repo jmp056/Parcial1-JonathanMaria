@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoParcial1.Entidades
+namespace Parcial1_JonathanMaria.Entidades
 {
     public class Ubicaciones
     {

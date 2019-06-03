@@ -7,6 +7,7 @@ namespace Parcial1_JonathanMaria.DAL
     {
         public DbSet<Productos> Productos { get; set; }
         public DbSet<Inventarios> Inventarios { get; set; }
+        public DbSet<Ubicaciones> Ubicaciones { get; set; }
         public Contexto() : base("ConStr")
         {   }
     }
