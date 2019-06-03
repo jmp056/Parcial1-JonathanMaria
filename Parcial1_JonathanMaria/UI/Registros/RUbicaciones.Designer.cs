@@ -1,4 +1,4 @@
-﻿namespace ProyectoParcial1.UI.Registros
+﻿namespace Parcial1_JonathanMaria.UI.Registros
 {
     partial class RUbicaciones
     {
@@ -45,7 +45,7 @@
             // BuscarButton
             // 
             this.BuscarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarButton.Location = new System.Drawing.Point(253, 12);
+            this.BuscarButton.Location = new System.Drawing.Point(253, 24);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(75, 23);
             this.BuscarButton.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             // IdUbicacionNumericUpDown
             // 
-            this.IdUbicacionNumericUpDown.Location = new System.Drawing.Point(110, 13);
+            this.IdUbicacionNumericUpDown.Location = new System.Drawing.Point(110, 27);
             this.IdUbicacionNumericUpDown.Name = "IdUbicacionNumericUpDown";
             this.IdUbicacionNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IdUbicacionNumericUpDown.TabIndex = 4;
@@ -74,32 +74,35 @@
             // NuevoButton
             // 
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoButton.Location = new System.Drawing.Point(40, 134);
+            this.NuevoButton.Location = new System.Drawing.Point(39, 124);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 23);
             this.NuevoButton.TabIndex = 5;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click_1);
             // 
             // GuardarButton
             // 
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarButton.Location = new System.Drawing.Point(135, 134);
+            this.GuardarButton.Location = new System.Drawing.Point(135, 124);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 23);
             this.GuardarButton.TabIndex = 6;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click_1);
             // 
             // EliminarButton
             // 
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarButton.Location = new System.Drawing.Point(253, 134);
+            this.EliminarButton.Location = new System.Drawing.Point(241, 124);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarButton.TabIndex = 7;
-            this.EliminarButton.Text = "Buscar";
+            this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click_1);
             // 
             // IdProducto
             // 
@@ -109,7 +112,7 @@
             this.IdProducto.Name = "IdProducto";
             this.IdProducto.Size = new System.Drawing.Size(93, 16);
             this.IdProducto.TabIndex = 8;
-            this.IdProducto.Text = "ID Producto:";
+            this.IdProducto.Text = "ID Ubicaion:";
             // 
             // label1
             // 
@@ -117,15 +120,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(95, 16);
             this.label1.TabIndex = 9;
-            this.label1.Text = "ID Producto:";
+            this.label1.Text = "Descripcion:";
             // 
             // RUbicaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 211);
+            this.ClientSize = new System.Drawing.Size(352, 169);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdProducto);
             this.Controls.Add(this.EliminarButton);

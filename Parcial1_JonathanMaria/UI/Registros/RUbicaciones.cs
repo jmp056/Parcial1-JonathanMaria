@@ -1,22 +1,16 @@
 ﻿using Parcial1_JonathanMaria.BLL;
 using Parcial1_JonathanMaria.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoParcial1.UI.Registros
+namespace Parcial1_JonathanMaria.UI.Registros
 {
     public partial class RUbicaciones : Form
     {
         public RUbicaciones()
         {
             InitializeComponent();
+            EliminarButton.Enabled = false;
         }
 
         private void Limpiar()
@@ -29,6 +23,7 @@ namespace ProyectoParcial1.UI.Registros
         {
             Ubicaciones ubicacion = new Ubicaciones();
             ubicacion.IdUbicacion = Convert.ToInt32(IdUbicacionNumericUpDown.Value);
+            ubicacion.Descripcion = DescripcionTextBox.Text;
             return ubicacion;
         }
 
@@ -76,7 +71,7 @@ namespace ProyectoParcial1.UI.Registros
             }
         }
 
-        private void NuevoButton_Click(object sender, EventArgs e)
+        private void NuevoButton_Click_1(object sender, EventArgs e)
         {
             Limpiar();
             MyErrorProvider.Clear();
@@ -84,7 +79,7 @@ namespace ProyectoParcial1.UI.Registros
             DescripcionTextBox.Focus();
         }
 
-        private void GuardarButton_Click(object sender, EventArgs e)
+        private void GuardarButton_Click_1(object sender, EventArgs e)
         {
             Ubicaciones ubicacion;
             bool paso = false;
@@ -117,7 +112,7 @@ namespace ProyectoParcial1.UI.Registros
                 MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void EliminarButton_Click(object sender, EventArgs e)
+        private void EliminarButton_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea eliminar esta ubicacion?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
@@ -125,9 +120,9 @@ namespace ProyectoParcial1.UI.Registros
                 int id;
                 int.TryParse(IdUbicacionNumericUpDown.Text, out id);
                 Limpiar();
-                if (ProductosBLL.Eliminar(id))
+                if (UbicacionesBLL.Eliminar(id))
                 {
-                    MessageBox.Show("El ubicacion fue eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El ubicacion fue eliminada", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                     IdUbicacionNumericUpDown.Enabled = true;
                     EliminarButton.Enabled = false;
@@ -138,6 +133,5 @@ namespace ProyectoParcial1.UI.Registros
             else
                 return;
         }
-
     }
 }

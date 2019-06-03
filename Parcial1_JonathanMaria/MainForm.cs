@@ -1,6 +1,5 @@
 ﻿using Parcial1_JonathanMaria.UI.Consultas;
 using Parcial1_JonathanMaria.UI.Registros;
-using ProyectoParcial1.UI.Registros;
 using System;
 using System.Windows.Forms;
 
