@@ -1,5 +1,6 @@
 ﻿using Parcial1_JonathanMaria.UI.Consultas;
 using Parcial1_JonathanMaria.UI.Registros;
+using ProyectoParcial1.UI.Registros;
 using System;
 using System.Windows.Forms;
 
@@ -22,6 +23,12 @@ namespace Parcial1_JonathanMaria
         {
             CValorTotalInventario Cv = new CValorTotalInventario();
             Cv.Show();
+        }
+
+        private void RegistroDeUbicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RUbicaciones Ru = new RUbicaciones();
+            Ru.Show();
         }
     }
 }
