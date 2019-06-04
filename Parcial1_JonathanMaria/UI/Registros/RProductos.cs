@@ -12,6 +12,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
         {
             InitializeComponent();
             AdvertenciaErrorProvider.SetError(IdProductoNumericUpDown, "Si desea guardar un producto nuevo, procure que el Id Producto sea 0");
+            LlenaComboBox();
         }
 
         private void Limpiar()
@@ -21,12 +22,13 @@ namespace Parcial1_JonathanMaria.UI.Registros
             ExistenciaNumericUpDown.Value = 0;
             CostoNumericUpDown.Value = 0;
             ValorInventarioTextBox.Text = string.Empty;
+            UbicacionComboBox.DisplayMember = null;
         }
 
         private Productos LlenaClase()
         {
             Productos producto = new Productos();
-            producto.IdProducto = Convert.ToInt32(IdProductoNumericUpDown.Value);
+            producto.ProductoId = Convert.ToInt32(IdProductoNumericUpDown.Value);
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existencia = Convert.ToInt32(ExistenciaNumericUpDown.Value);
             producto.Costo = Convert.ToSingle(CostoNumericUpDown.Value);
@@ -35,7 +37,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
         }
         private void LlenaCampos(Productos producto)
         {
-            IdProductoNumericUpDown.Value = producto.IdProducto;
+            IdProductoNumericUpDown.Value = producto.ProductoId;
             DescripcionTextBox.Text = producto.Descripcion;
             ExistenciaNumericUpDown.Value = producto.Existencia;
             CostoNumericUpDown.Value = Convert.ToDecimal(producto.Costo);
@@ -80,6 +82,13 @@ namespace Parcial1_JonathanMaria.UI.Registros
                 CostoNumericUpDown.Focus();
                 paso = false;
             }
+
+            if (UbicacionComboBox == null)
+            {
+                MyErrorProvider.SetError(UbicacionComboBox, "El precio del producto no puede ser mayor que 999,999,999");
+                UbicacionComboBox.Focus();
+                paso = false;
+            }
             return paso;
         }
 
@@ -95,12 +104,21 @@ namespace Parcial1_JonathanMaria.UI.Registros
             {
                 tot += Convert.ToDouble(produ.Cells["ValorEnInventario"].Value);
             }
-            inventario.Id = 1;
+            inventario.InventarioId = 1;
             inventario.Valor = Convert.ToSingle(tot);
             if (InventariosBLL.Buscar(1) == null)
                 InventariosBLL.Guardar(inventario);
             else
                 InventariosBLL.Modificar(inventario);
+        }
+
+        private void LlenaComboBox()
+        {
+            var ubicaciones = new List<Ubicaciones>();
+            ubicaciones = UbicacionesBLL.GetList(p => true);
+            UbicacionComboBox.DataSource = ubicaciones;
+            UbicacionComboBox.DisplayMember = "Ubicaciones";
+            UbicacionComboBox.DisplayMember = "descripcion";
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -206,6 +224,12 @@ namespace Parcial1_JonathanMaria.UI.Registros
         private void CostoNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             ValorInventarioTextBox.Text = Convert.ToString(Convert.ToInt32(ExistenciaNumericUpDown.Value) * CostoNumericUpDown.Value);
+        }
+
+        private void AgregarUbicacionButton_Click(object sender, EventArgs e)
+        {
+            RUbicaciones Ru = new RUbicaciones();
+            Ru.Show();
         }
     }
 }

@@ -48,6 +48,9 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UbicacionComboBox = new System.Windows.Forms.ComboBox();
+            this.AgregarUbicacionButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
@@ -63,9 +66,9 @@
             this.IdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdProducto.Location = new System.Drawing.Point(20, 24);
             this.IdProducto.Name = "IdProducto";
-            this.IdProducto.Size = new System.Drawing.Size(93, 16);
+            this.IdProducto.Size = new System.Drawing.Size(89, 16);
             this.IdProducto.TabIndex = 0;
-            this.IdProducto.Text = "ID Producto:";
+            this.IdProducto.Text = "ID Producto";
             // 
             // Descripcion
             // 
@@ -201,7 +204,7 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(291, 123);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(81, 85);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -211,7 +214,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(282, 227);
+            this.EliminarButton.Location = new System.Drawing.Point(282, 263);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(90, 30);
             this.EliminarButton.TabIndex = 13;
@@ -225,7 +228,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonGuardar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(145, 227);
+            this.GuardarButton.Location = new System.Drawing.Point(145, 263);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(90, 30);
             this.GuardarButton.TabIndex = 12;
@@ -239,7 +242,7 @@
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = global::ProyectoParcial1.Properties.Resources.BotonNuevo;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(15, 227);
+            this.NuevoButton.Location = new System.Drawing.Point(15, 263);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(90, 30);
             this.NuevoButton.TabIndex = 11;
@@ -262,11 +265,44 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ubicacion";
+            // 
+            // UbicacionComboBox
+            // 
+            this.UbicacionComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UbicacionComboBox.FormattingEnabled = true;
+            this.UbicacionComboBox.Location = new System.Drawing.Point(145, 224);
+            this.UbicacionComboBox.Name = "UbicacionComboBox";
+            this.UbicacionComboBox.Size = new System.Drawing.Size(121, 24);
+            this.UbicacionComboBox.TabIndex = 17;
+            this.UbicacionComboBox.Text = "Seleccionar";
+            // 
+            // AgregarUbicacionButton
+            // 
+            this.AgregarUbicacionButton.Location = new System.Drawing.Point(282, 224);
+            this.AgregarUbicacionButton.Name = "AgregarUbicacionButton";
+            this.AgregarUbicacionButton.Size = new System.Drawing.Size(24, 24);
+            this.AgregarUbicacionButton.TabIndex = 18;
+            this.AgregarUbicacionButton.Text = "+";
+            this.AgregarUbicacionButton.UseVisualStyleBackColor = true;
+            this.AgregarUbicacionButton.Click += new System.EventHandler(this.AgregarUbicacionButton_Click);
+            // 
             // RProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 280);
+            this.ClientSize = new System.Drawing.Size(384, 326);
+            this.Controls.Add(this.AgregarUbicacionButton);
+            this.Controls.Add(this.UbicacionComboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ConsultaDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EliminarButton);
@@ -318,5 +354,8 @@
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.ErrorProvider AdvertenciaErrorProvider;
         private System.Windows.Forms.DataGridView ConsultaDataGridView;
+        private System.Windows.Forms.ComboBox UbicacionComboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button AgregarUbicacionButton;
     }
 }

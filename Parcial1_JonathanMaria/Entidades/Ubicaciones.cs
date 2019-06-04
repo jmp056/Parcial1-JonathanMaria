@@ -10,12 +10,12 @@ namespace Parcial1_JonathanMaria.Entidades
     public class Ubicaciones
     {
         [Key]
-        public int IdUbicacion { get; set; }
+        public int UbicacionId { get; set; }
         public string Descripcion { get; set; }
 
         public Ubicaciones()
         {
-            IdUbicacion = 0;
+            UbicacionId = 0;
             Descripcion = string.Empty;
         }
     }

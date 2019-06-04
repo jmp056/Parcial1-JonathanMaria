@@ -91,6 +91,28 @@ namespace Parcial1_JonathanMaria.BLL
             return ubicacion;
         }
 
+        public static bool Comparar(string ub)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            Ubicaciones ubicacion = new Ubicaciones();
+            try
+            {
+                ubicacion = db.Ubicaciones.Find(ub);
+                if (ubicacion == null)
+                    paso = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+            return paso;
+        }
+
         public static List<Ubicaciones> GetList(Expression<Func<Ubicaciones, bool>> ubicacion)
         {
             List<Ubicaciones> Lista = new List<Ubicaciones>();

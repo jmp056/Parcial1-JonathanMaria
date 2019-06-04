@@ -22,14 +22,14 @@ namespace Parcial1_JonathanMaria.UI.Registros
         private Ubicaciones LlenaClase()
         {
             Ubicaciones ubicacion = new Ubicaciones();
-            ubicacion.IdUbicacion = Convert.ToInt32(IdUbicacionNumericUpDown.Value);
+            ubicacion.UbicacionId = Convert.ToInt32(IdUbicacionNumericUpDown.Value);
             ubicacion.Descripcion = DescripcionTextBox.Text;
             return ubicacion;
         }
 
         private void LlenaCampos(Ubicaciones ubicacion)
         {
-            IdUbicacionNumericUpDown.Value = ubicacion.IdUbicacion;
+            IdUbicacionNumericUpDown.Value = ubicacion.UbicacionId;
             DescripcionTextBox.Text = ubicacion.Descripcion;
         }
 
@@ -85,31 +85,40 @@ namespace Parcial1_JonathanMaria.UI.Registros
             bool paso = false;
             if (!Validar())
                 return;
-            ubicacion = LlenaClase();
-            if (IdUbicacionNumericUpDown.Value == 0)
+            string des = DescripcionTextBox.Text;
+            if (UbicacionesBLL.Comparar(des) == false)
             {
-                paso = UbicacionesBLL.Guardar(ubicacion);
-                MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Limpiar();
-            }
-            else
-            {
-                if (!ExisteEnLaBaseDeDatos())
+                ubicacion = LlenaClase();
+                if (IdUbicacionNumericUpDown.Value == 0)
                 {
-                    MessageBox.Show("No se puede modificar una ubicacion que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (MessageBox.Show("Esta seguro que desea modificar esta ubicacion?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
-                {
-                    paso = UbicacionesBLL.Modificar(ubicacion);
-                    MessageBox.Show("Modificada!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    paso = UbicacionesBLL.Guardar(ubicacion);
+                    MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
                 }
                 else
-                    return;
+                {
+                    if (!ExisteEnLaBaseDeDatos())
+                    {
+                        MessageBox.Show("No se puede modificar una ubicacion que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (MessageBox.Show("Esta seguro que desea modificar esta ubicacion?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                    {
+                        paso = UbicacionesBLL.Modificar(ubicacion);
+                        MessageBox.Show("Modificada!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                        return;
+                }
+                if (!paso)
+                    MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (!paso)
-                MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Este ubicacion ya existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void EliminarButton_Click_1(object sender, EventArgs e)

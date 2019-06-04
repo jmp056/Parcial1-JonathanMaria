@@ -4,7 +4,7 @@ USE Parcial1_JonathanMariaDb
 GO
 create table Productos
 (
-	IdProducto int primary key identity,
+	ProductoId int primary key identity,
 	Descripcion varchar(40),
 	Existencia int,
 	Costo real,
@@ -13,6 +13,12 @@ create table Productos
 
 create table Inventarios
 (
-	id int unique,
+	InventarioId int unique,
 	Valor real
+)
+
+create table Ubicaciones
+(
+	UbicacionId int primary key identity,
+	Descripcion varchar(30)
 )
