@@ -15,19 +15,19 @@ namespace Parcial1_JonathanMaria
         private void RegistroDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RProductos Rp = new RProductos();
-            Rp.Show();
+            Rp.ShowDialog();
         }
 
         private void ValorDelInventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CValorTotalInventario Cv = new CValorTotalInventario();
-            Cv.Show();
+            Cv.ShowDialog();
         }
 
         private void RegistroDeUbicacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RUbicaciones Ru = new RUbicaciones();
-            Ru.Show();
+            Ru.ShowDialog();
         }
     }
 }

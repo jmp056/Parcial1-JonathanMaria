@@ -91,15 +91,13 @@ namespace Parcial1_JonathanMaria.BLL
             return ubicacion;
         }
 
-        public static bool Comparar(string ub)
+        public static bool Existe(string descipcion)
         {
             bool paso = false;
             Contexto db = new Contexto();
-            Ubicaciones ubicacion = new Ubicaciones();
             try
             {
-                ubicacion = db.Ubicaciones.Find(ub);
-                if (ubicacion == null)
+                if (db.Ubicaciones.Any(p => p.Descripcion.Equals(descipcion)))
                     paso = true;
             }
             catch (Exception)
@@ -111,6 +109,7 @@ namespace Parcial1_JonathanMaria.BLL
                 db.Dispose();
             }
             return paso;
+
         }
 
         public static List<Ubicaciones> GetList(Expression<Func<Ubicaciones, bool>> ubicacion)

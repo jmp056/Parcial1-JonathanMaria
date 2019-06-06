@@ -2,6 +2,7 @@
 using Parcial1_JonathanMaria.Entidades;
 using System;
 using System.Windows.Forms;
+using Parcial1_JonathanMaria.UI.Registros;
 
 namespace Parcial1_JonathanMaria.UI.Registros
 {
@@ -15,21 +16,21 @@ namespace Parcial1_JonathanMaria.UI.Registros
 
         private void Limpiar()
         {
-            IdUbicacionNumericUpDown.Value = 0;
+            UbicacionIdNumericUpDown.Value = 0;
             DescripcionTextBox.Text = string.Empty;
         }
 
         private Ubicaciones LlenaClase()
         {
             Ubicaciones ubicacion = new Ubicaciones();
-            ubicacion.UbicacionId = Convert.ToInt32(IdUbicacionNumericUpDown.Value);
+            ubicacion.UbicacionId = Convert.ToInt32(UbicacionIdNumericUpDown.Value);
             ubicacion.Descripcion = DescripcionTextBox.Text;
             return ubicacion;
         }
 
         private void LlenaCampos(Ubicaciones ubicacion)
         {
-            IdUbicacionNumericUpDown.Value = ubicacion.UbicacionId;
+            UbicacionIdNumericUpDown.Value = ubicacion.UbicacionId;
             DescripcionTextBox.Text = ubicacion.Descripcion;
         }
 
@@ -48,7 +49,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            Ubicaciones ubicacion = UbicacionesBLL.Buscar((int)IdUbicacionNumericUpDown.Value);
+            Ubicaciones ubicacion = UbicacionesBLL.Buscar((int)UbicacionIdNumericUpDown.Value);
             return ubicacion != null;
         }
 
@@ -57,7 +58,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             MyErrorProvider.Clear();
             int id;
             Ubicaciones ubicacion = new Ubicaciones();
-            int.TryParse(IdUbicacionNumericUpDown.Text, out id);
+            int.TryParse(UbicacionIdNumericUpDown.Text, out id);
             ubicacion = UbicacionesBLL.Buscar(id);
             if (ubicacion != null)
             {
@@ -67,7 +68,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             }
             else
             {
-                MessageBox.Show("Producto no encontrado");
+                MessageBox.Show("Ubicacion no encontrada!");
             }
         }
 
@@ -85,11 +86,15 @@ namespace Parcial1_JonathanMaria.UI.Registros
             bool paso = false;
             if (!Validar())
                 return;
-            string des = DescripcionTextBox.Text;
-            if (UbicacionesBLL.Comparar(des) == false)
+            ubicacion = LlenaClase();
+            if (UbicacionesBLL.Existe(ubicacion.Descripcion) == true)
             {
-                ubicacion = LlenaClase();
-                if (IdUbicacionNumericUpDown.Value == 0)
+                MessageBox.Show("Ya esta ubicacion existe, utilize otra descripcion!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (UbicacionIdNumericUpDown.Value == 0)
                 {
                     paso = UbicacionesBLL.Guardar(ubicacion);
                     MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -114,11 +119,6 @@ namespace Parcial1_JonathanMaria.UI.Registros
                 if (!paso)
                     MessageBox.Show("Error al guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Este ubicacion ya existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
         }
 
         private void EliminarButton_Click_1(object sender, EventArgs e)
@@ -127,20 +127,21 @@ namespace Parcial1_JonathanMaria.UI.Registros
             {
                 MyErrorProvider.Clear();
                 int id;
-                int.TryParse(IdUbicacionNumericUpDown.Text, out id);
+                int.TryParse(UbicacionIdNumericUpDown.Text, out id);
                 Limpiar();
                 if (UbicacionesBLL.Eliminar(id))
                 {
                     MessageBox.Show("El ubicacion fue eliminada", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Limpiar();
-                    IdUbicacionNumericUpDown.Enabled = true;
+                    UbicacionIdNumericUpDown.Enabled = true;
                     EliminarButton.Enabled = false;
                 }
                 else
+                {
                     MessageBox.Show("El producto no pudo ser eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
-            else
-                return;
         }
     }
 }

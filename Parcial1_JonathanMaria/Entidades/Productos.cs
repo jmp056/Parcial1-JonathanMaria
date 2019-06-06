@@ -10,6 +10,7 @@ namespace Parcial1_JonathanMaria.Entidades
         public int Existencia { get; set; }
         public float Costo { get; set; }
         public float ValorEnInventario { get; set; }
+        public string Ubicacion { get; set; }
 
         public Productos()
         {
@@ -18,6 +19,7 @@ namespace Parcial1_JonathanMaria.Entidades
             Existencia = 0;
             Costo = 0;
             ValorEnInventario = 0;
+            Ubicacion = string.Empty;
         }
     }
 }

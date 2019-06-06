@@ -33,6 +33,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             producto.Existencia = Convert.ToInt32(ExistenciaNumericUpDown.Value);
             producto.Costo = Convert.ToSingle(CostoNumericUpDown.Value);
             producto.ValorEnInventario = Convert.ToSingle(ValorInventarioTextBox.Text);
+            producto.Ubicacion = UbicacionComboBox.Text;
             return producto;
         }
         private void LlenaCampos(Productos producto)
@@ -42,6 +43,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             ExistenciaNumericUpDown.Value = producto.Existencia;
             CostoNumericUpDown.Value = Convert.ToDecimal(producto.Costo);
             ValorInventarioTextBox.Text = Convert.ToString(producto.ValorEnInventario);
+            UbicacionComboBox.Text = producto.Ubicacion;
         }
 
         private bool Validar()
@@ -83,9 +85,9 @@ namespace Parcial1_JonathanMaria.UI.Registros
                 paso = false;
             }
 
-            if (UbicacionComboBox == null)
+            if (UbicacionComboBox.SelectedIndex.Equals(-1))
             {
-                MyErrorProvider.SetError(UbicacionComboBox, "El precio del producto no puede ser mayor que 999,999,999");
+                MyErrorProvider.SetError(UbicacionComboBox, "Eliga una ubicacion para el producto");
                 UbicacionComboBox.Focus();
                 paso = false;
             }
@@ -112,12 +114,11 @@ namespace Parcial1_JonathanMaria.UI.Registros
                 InventariosBLL.Modificar(inventario);
         }
 
-        private void LlenaComboBox()
+        public void LlenaComboBox()
         {
             var ubicaciones = new List<Ubicaciones>();
             ubicaciones = UbicacionesBLL.GetList(p => true);
             UbicacionComboBox.DataSource = ubicaciones;
-            UbicacionComboBox.DisplayMember = "Ubicaciones";
             UbicacionComboBox.DisplayMember = "descripcion";
         }
 
@@ -229,7 +230,10 @@ namespace Parcial1_JonathanMaria.UI.Registros
         private void AgregarUbicacionButton_Click(object sender, EventArgs e)
         {
             RUbicaciones Ru = new RUbicaciones();
-            Ru.Show();
+            Ru.ShowDialog();
+            LlenaComboBox();
         }
+
     }
 }
+
