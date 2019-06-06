@@ -124,13 +124,6 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\Scripts\Parcial1_JonathanMariaDb.sql" />
-    <None Include="Resources\ImagenConsulta.png" />
-    <None Include="Resources\ImagenRegistro.png" />
-    <None Include="Resources\BotonEliminar.png" />
-    <None Include="Resources\BotonGuardar.png" />
-    <None Include="Resources\BotonNuevo.png" />
-    <None Include="Resources\Empaque.jpg" />
-    <None Include="Resources\BotonBuscar.png" />
     <None Include="Resources\BotonActualizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
