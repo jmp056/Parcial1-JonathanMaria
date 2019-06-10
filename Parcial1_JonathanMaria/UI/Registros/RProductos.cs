@@ -22,7 +22,7 @@ namespace Parcial1_JonathanMaria.UI.Registros
             ExistenciaNumericUpDown.Value = 0;
             CostoNumericUpDown.Value = 0;
             ValorInventarioTextBox.Text = string.Empty;
-            UbicacionComboBox.DisplayMember = null;
+            UbicacionComboBox.Text = string.Empty;
         }
 
         private Productos LlenaClase()

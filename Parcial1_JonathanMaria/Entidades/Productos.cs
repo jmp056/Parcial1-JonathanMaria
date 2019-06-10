@@ -11,6 +11,7 @@ namespace Parcial1_JonathanMaria.Entidades
         public float Costo { get; set; }
         public float ValorEnInventario { get; set; }
         public string Ubicacion { get; set; }
+        public virtual List<PreciosDetalle> Precios { get; set; }
 
         public Productos()
         {

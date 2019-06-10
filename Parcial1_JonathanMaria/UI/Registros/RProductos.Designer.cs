@@ -104,7 +104,7 @@
             // 
             this.ValorInventario.AutoSize = true;
             this.ValorInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValorInventario.Location = new System.Drawing.Point(20, 184);
+            this.ValorInventario.Location = new System.Drawing.Point(277, 106);
             this.ValorInventario.Name = "ValorInventario";
             this.ValorInventario.Size = new System.Drawing.Size(117, 16);
             this.ValorInventario.TabIndex = 4;
@@ -175,7 +175,7 @@
             // 
             this.ValorInventarioTextBox.Enabled = false;
             this.ValorInventarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValorInventarioTextBox.Location = new System.Drawing.Point(145, 184);
+            this.ValorInventarioTextBox.Location = new System.Drawing.Point(402, 106);
             this.ValorInventarioTextBox.Name = "ValorInventarioTextBox";
             this.ValorInventarioTextBox.Size = new System.Drawing.Size(121, 22);
             this.ValorInventarioTextBox.TabIndex = 9;
@@ -191,7 +191,7 @@
             // ConsultaDataGridView
             // 
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Location = new System.Drawing.Point(291, 93);
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(507, 16);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
             this.ConsultaDataGridView.Size = new System.Drawing.Size(22, 24);
             this.ConsultaDataGridView.TabIndex = 15;
@@ -201,7 +201,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 224);
+            this.label1.Location = new System.Drawing.Point(277, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 16;
@@ -211,7 +211,7 @@
             // 
             this.UbicacionComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UbicacionComboBox.FormattingEnabled = true;
-            this.UbicacionComboBox.Location = new System.Drawing.Point(145, 224);
+            this.UbicacionComboBox.Location = new System.Drawing.Point(361, 146);
             this.UbicacionComboBox.Name = "UbicacionComboBox";
             this.UbicacionComboBox.Size = new System.Drawing.Size(121, 24);
             this.UbicacionComboBox.TabIndex = 17;
@@ -220,7 +220,7 @@
             // AgregarUbicacionButton
             // 
             this.AgregarUbicacionButton.Image = global::ProyectoParcial1.Properties.Resources.BotonAñadir;
-            this.AgregarUbicacionButton.Location = new System.Drawing.Point(282, 222);
+            this.AgregarUbicacionButton.Location = new System.Drawing.Point(493, 142);
             this.AgregarUbicacionButton.Name = "AgregarUbicacionButton";
             this.AgregarUbicacionButton.Size = new System.Drawing.Size(30, 30);
             this.AgregarUbicacionButton.TabIndex = 18;
@@ -232,9 +232,9 @@
             this.pictureBox1.BackgroundImage = global::ProyectoParcial1.Properties.Resources.Empaque;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(291, 123);
+            this.pictureBox1.Location = new System.Drawing.Point(390, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 71);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
@@ -244,7 +244,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(282, 263);
+            this.EliminarButton.Location = new System.Drawing.Point(361, 346);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(90, 30);
             this.EliminarButton.TabIndex = 13;
@@ -258,7 +258,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonGuardar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(145, 263);
+            this.GuardarButton.Location = new System.Drawing.Point(224, 346);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(90, 30);
             this.GuardarButton.TabIndex = 12;
@@ -272,7 +272,7 @@
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = global::ProyectoParcial1.Properties.Resources.BotonNuevo;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(15, 263);
+            this.NuevoButton.Location = new System.Drawing.Point(94, 346);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(90, 30);
             this.NuevoButton.TabIndex = 11;
@@ -299,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 326);
+            this.ClientSize = new System.Drawing.Size(541, 404);
             this.Controls.Add(this.AgregarUbicacionButton);
             this.Controls.Add(this.UbicacionComboBox);
             this.Controls.Add(this.label1);
