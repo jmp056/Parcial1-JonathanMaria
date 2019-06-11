@@ -51,6 +51,14 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PrecioNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TipoPrecioTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.RemoverFilaButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdProductoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenciaNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
@@ -58,6 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // IdProducto
@@ -244,7 +255,7 @@
             this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(361, 346);
+            this.EliminarButton.Location = new System.Drawing.Point(361, 399);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(90, 30);
             this.EliminarButton.TabIndex = 13;
@@ -258,7 +269,7 @@
             this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = global::ProyectoParcial1.Properties.Resources.BotonGuardar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(224, 346);
+            this.GuardarButton.Location = new System.Drawing.Point(224, 399);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(90, 30);
             this.GuardarButton.TabIndex = 12;
@@ -272,7 +283,7 @@
             this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = global::ProyectoParcial1.Properties.Resources.BotonNuevo;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(94, 346);
+            this.NuevoButton.Location = new System.Drawing.Point(94, 399);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(90, 30);
             this.NuevoButton.TabIndex = 11;
@@ -295,11 +306,100 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 52);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(488, 96);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.RemoverFilaButton);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.TipoPrecioTextBox);
+            this.groupBox1.Controls.Add(this.PrecioNumericUpDown);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(23, 179);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(500, 193);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipos de precios";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Tipo de precio";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(283, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Precio";
+            // 
+            // PrecioNumericUpDown
+            // 
+            this.PrecioNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(342, 19);
+            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
+            this.PrecioNumericUpDown.Size = new System.Drawing.Size(117, 22);
+            this.PrecioNumericUpDown.TabIndex = 21;
+            // 
+            // TipoPrecioTextBox
+            // 
+            this.TipoPrecioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoPrecioTextBox.Location = new System.Drawing.Point(122, 18);
+            this.TipoPrecioTextBox.Name = "TipoPrecioTextBox";
+            this.TipoPrecioTextBox.Size = new System.Drawing.Size(160, 22);
+            this.TipoPrecioTextBox.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::ProyectoParcial1.Properties.Resources.BotonAñadir;
+            this.button1.Location = new System.Drawing.Point(464, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // RemoverFilaButton
+            // 
+            this.RemoverFilaButton.Enabled = false;
+            this.RemoverFilaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoverFilaButton.Image = global::ProyectoParcial1.Properties.Resources.BotonEliminar;
+            this.RemoverFilaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RemoverFilaButton.Location = new System.Drawing.Point(9, 154);
+            this.RemoverFilaButton.Name = "RemoverFilaButton";
+            this.RemoverFilaButton.Size = new System.Drawing.Size(133, 30);
+            this.RemoverFilaButton.TabIndex = 21;
+            this.RemoverFilaButton.Text = "Remover Fila";
+            this.RemoverFilaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoverFilaButton.UseVisualStyleBackColor = true;
+            // 
             // RProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 404);
+            this.ClientSize = new System.Drawing.Size(541, 441);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.AgregarUbicacionButton);
             this.Controls.Add(this.UbicacionComboBox);
             this.Controls.Add(this.label1);
@@ -329,6 +429,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.AdvertenciaErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +461,13 @@
         private System.Windows.Forms.ComboBox UbicacionComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AgregarUbicacionButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TipoPrecioTextBox;
+        private System.Windows.Forms.NumericUpDown PrecioNumericUpDown;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button RemoverFilaButton;
     }
 }
