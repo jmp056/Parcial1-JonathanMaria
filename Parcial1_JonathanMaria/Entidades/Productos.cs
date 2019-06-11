@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProyectoParcial1.Entidades;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Parcial1_JonathanMaria.Entidades
 {
@@ -21,6 +23,7 @@ namespace Parcial1_JonathanMaria.Entidades
             Costo = 0;
             ValorEnInventario = 0;
             Ubicacion = string.Empty;
+            Precios = new List<PreciosDetalle>();
         }
     }
 }

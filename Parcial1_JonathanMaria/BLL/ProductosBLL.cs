@@ -36,6 +36,12 @@ namespace Parcial1_JonathanMaria.BLL
             Contexto db = new Contexto();
             try
             {
+                var Anterior = db.Productos.Find(producto.ProductoId);
+                foreach (var item in Anterior.Precios)
+                {
+                    if (!producto.Precios.Exists(d => d.PrecioId == item.PrecioId))
+                        db.Entry(item).State = EntityState.Deleted;
+                }
                 db.Entry(producto).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
