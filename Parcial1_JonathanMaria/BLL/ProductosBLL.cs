@@ -85,6 +85,7 @@ namespace Parcial1_JonathanMaria.BLL
             try
             {
                 producto = db.Productos.Find(id);
+                producto.Precios.Count();
             }
             catch (Exception)
             {
